@@ -10,6 +10,6 @@ namespace APICatalogoCartas.ViewModel
         public int Attack { get; set;}
         public int Life { get; set;}
         public int Cost { get; set; }
-        public Effects Effect { get; set; }
+        public int Effect { get; set; }
     }
 }

@@ -23,6 +23,6 @@ namespace APICatalogoCartas.InputModel
 
         [Required]
         [Range(0, 5, ErrorMessage = "Escolha um dos efeitos: \n0 - Nenhum;\n1 - Voar;\n2 - Submergir;\n3 - Veneno;\n4 - Congelar;\n5 - Terror;")]
-        public Effects Effect { get; set; }
+        public int Effect { get; set; }
     }
 }

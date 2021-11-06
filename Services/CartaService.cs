@@ -31,7 +31,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Attack,
                 Cost = carta.Cost,
-                Effect = carta.Effect
+                Effect = (int) carta.Effect
             }).ToList();
         }
 
@@ -48,7 +48,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Attack,
                 Cost = carta.Cost,
-                Effect = carta.Effect
+                Effect = (int) carta.Effect
             };
         }
 
@@ -65,7 +65,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Life,
                 Cost = carta.Cost,
-                Effect = carta.Effect
+                Effect = (Effects) carta.Effect
             };
 
             await _cartaRepository.Inserir(cartaInsert);
@@ -91,18 +91,18 @@ namespace APICatalogoCartas.Services
             entidadeCarta.Attack = carta.Attack;
             entidadeCarta.Life = carta.Life;
             entidadeCarta.Cost = carta.Cost;
-            entidadeCarta.Effect = carta.Effect;
+            entidadeCarta.Effect = (Effects) carta.Effect;
 
             await _cartaRepository.Atualizar(entidadeCarta);
         }
 
-        public async Task Atualizar(Guid id, Effects efeito)
+        public async Task Atualizar(Guid id, int efeito)
         {
             var entidadeCarta = await _cartaRepository.Obter(id);
 
             if(entidadeCarta == null) throw new CartaNaoCadastradaException();
 
-            entidadeCarta.Effect = efeito;
+            entidadeCarta.Effect = (Effects) efeito;
 
             await _cartaRepository.Atualizar(entidadeCarta);
         }

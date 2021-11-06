@@ -17,7 +17,7 @@ namespace APICatalogoCartas.Services
 
         Task Atualizar(Guid id, CartaInputModel carta);
 
-        Task Atualizar(Guid id, Effects efeito);
+        Task Atualizar(Guid id, int efeito);
 
         Task Remover(Guid id);
     }

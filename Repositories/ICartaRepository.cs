@@ -12,7 +12,7 @@ namespace APICatalogoCartas.Repositories
 
         Task<Carta> Obter(Guid id);
 
-        Task<List<Carta>> Obter(string nome, Effects efeito);
+        Task<List<Carta>> Obter(string nome, int efeito);
 
         Task Inserir(Carta carta);
 

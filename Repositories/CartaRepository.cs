@@ -32,9 +32,10 @@ namespace APICatalogoCartas.Repositories
             return Task.FromResult(cartas[id]);
         }
 
-        public Task<List<Carta>> Obter(string nome, Effects efeito)
+        public Task<List<Carta>> Obter(string nome, int efeito)
         {
-            return Task.FromResult(cartas.Values.Where(carta => carta.Name.Equals(nome) && carta.Effect.Equals(efeito)).ToList());
+            Effects effectType = (Effects) efeito;
+            return Task.FromResult(cartas.Values.Where(carta => carta.Name.Equals(nome) && carta.Effect.Equals(effectType)).ToList());
         }
 
         public Task Inserir(Carta carta)
