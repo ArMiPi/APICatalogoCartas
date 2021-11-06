@@ -118,7 +118,7 @@ namespace APICatalogoCartas.Controllers.V1
         /// </remarks>
         /// <response code="200">Caso a carta tenha sido atualizada</response>
         /// <response code="404">Caso a carta não exista</response>
-        [HttpPatch("{idCarta:guid}/efeito/{efeito:string}")]
+        [HttpPatch("{idCarta:guid}/efeito/{efeito:int}")]
         public async Task<ActionResult> AtualizarCarta([FromRoute] Guid idCarta, [FromRoute] int efeito)
         {
             try

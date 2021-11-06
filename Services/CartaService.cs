@@ -31,7 +31,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Attack,
                 Cost = carta.Cost,
-                Effect = (int) carta.Effect
+                Effect = carta.Effect.ToString()
             }).ToList();
         }
 
@@ -48,7 +48,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Attack,
                 Cost = carta.Cost,
-                Effect = (int) carta.Effect
+                Effect = carta.Effect.ToString()
             };
         }
 
@@ -77,7 +77,7 @@ namespace APICatalogoCartas.Services
                 Attack = carta.Attack,
                 Life = carta.Life,
                 Cost = carta.Cost,
-                Effect = carta.Effect
+                Effect = carta.Effect.ToString()
             };
         }
 
